@@ -61,6 +61,14 @@
   ---
 ### E-R模型扩充
   + **特殊化**
+    + 全部特殊化
+      > 双实线连接圆圈
+    + 部分特殊化
+      > 单实线连接圆圈
+    + 不相交特殊化
+      > 圆圈中为d
+    + 重叠特殊化
+      > 圆圈中为o
     > 表示方式如下图<br>
   ![9-11](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-12.png)
   + 书中472页的图9-11应改为<br>

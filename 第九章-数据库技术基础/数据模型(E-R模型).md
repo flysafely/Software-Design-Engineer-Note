@@ -34,6 +34,8 @@
       + 联系、实例和关系模式的转换
         + E-R图联系中的1:1<br>
         ![9-15](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-15.png)
+        + E-R图联系中的1:n<br>
+        ![9-16](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-16.png)
     + 两个实体间的联系
       + 一对一：（1:1）<br>
       + 一对多：（1:n）<br>

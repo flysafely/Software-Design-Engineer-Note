@@ -34,7 +34,7 @@
         + 1：1：1<br>
         + 1：m：n<br>
         + r：m：n<br>
-    + 同一实体间的二元联系
+    + 同一实体间的二元联系<br>
       ![9-14](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-14.jpg)
     + 弱实体间的联系<br>
       ![9-7](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-7.jpg)

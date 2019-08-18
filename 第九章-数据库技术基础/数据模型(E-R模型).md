@@ -25,14 +25,22 @@
       菱形框中写联系名<br>
       用无向边分别连接有关实体<br>
       用(1:1,1:n,m:n)在无向边上标注联系的类型<br>
-    >> 联系的类型：<br>
-        一对一：（1:1）<br>
-        一对多：（1:n）<br>
-        多对多：（m:n）<br>
-    + 弱实体间的联系<br>
+    + 两个实体间的联系
+      + 一对一：（1:1）<br>
+      + 一对多：（1:n）<br>
+      + 多对多：（m:n）<br>
+    + 两个以上实体间的联系
+      + 两两间的联系
+        + 1:1:1<br>
+        + 1:m:n<br>
+        + r:m:n<br>
++ 弱实体间的联系<br>
       ![9-7](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-7.jpg)
     + 联系集和实体连接<br>
+    ![9-10](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-9.jpg)
+    + 实体全部参与到联系中<br>
     ![9-10](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-10.jpg)
+    + 
   + **属性**<br>
     ![9-4](https://github.com/flysafely/Software-Design-Engineer-Note/blob/master/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/%E6%9C%AC%E7%AB%A0%E5%9B%BE%E7%A4%BA/9-4.jpg)
     > 用椭圆表示<br>

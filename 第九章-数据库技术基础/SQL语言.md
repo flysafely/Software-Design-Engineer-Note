@@ -25,10 +25,10 @@
                           FOREIGN KEY(Sno) REFERENCES S(Sno),//该句为表级完整性约束条件
                           FOREIGN KEY(Pno) REFERENCES P(Pno));该句为表级完整性约束条件
           ```
-        + 修改
+        + 修改(谨慎修改)
           ```SQL
           //修改表名
-          ALTER TABLE S RENAME TO NewS
+          ALTER TABLE S RENAME NewS
           //修改多个表名
           RENAME TABLE S TO NewS,TABLE M TO NewM
           //增加列

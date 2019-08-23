@@ -27,7 +27,20 @@
           ```
         + 修改
           ```SQL
-          
+          //修改表名
+          ALTER TABLE S RENAME TO NewS
+          //修改多个表名
+          RENAME TABLE S TO NewS,TABLE M TO NewM
+          //增加列
+          ALTER TABLE S ADD Zap CHAR(6)
+          //删除列
+          ALTER TABLE S DROP COLUMN Zap
+          //修改列
+            //修改列名称
+            ALTER TABLE S CHANGE Zap NewZap INT NOT NULL
+            //修改列类型
+            ALTER TABLE S MODIFY Zap NUMERIC(9)
+         
           ```
         + 删除
       + **索引**

@@ -52,7 +52,15 @@
           DROP TABLE S
           ```
       + **索引**
+        + 聚集索引
+          > 索引表中的索引项的顺序与表中记录的物理顺序**一致**
+        + 非聚集索引
+          > 索引表中的索引项的顺序与表中记录的物理顺序**不一致**
         + 创建
+        ```SQL
+        /*CREATE UNIQUE INDEX <索引名> ON <表名>(<列名1>[次序][,<列名2>[次序]]...)*/
+        CREATE UNIQUE INDEX SPJ-NO ON SPJ(Sno ASC,Pno DESC,JNO ASC)
+        ```
         + 删除
       + **视图**
         + 创建

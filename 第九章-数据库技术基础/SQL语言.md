@@ -17,32 +17,40 @@
       + **表**
         + 创建
           ```SQL
-          CREATE TABLE SP(Sno CHAR(5) NOT NULL UNIQUE,//NOT NULL UNIQUE是列级完整性约束条件
-                          Pno CHAR(30) UNIQUE,//CHAR(30)是数据类型和长度
+          CREATE TABLE SP(Sno CHAR(5) NOT NULL UNIQUE,/*NOT NULL UNIQUE是列级完整性约束条件*/
+                          Pno CHAR(30) UNIQUE,/*CHAR(30)是数据类型和长度*/
                           Status CHAR(8),
                           Qty CHAR(20),
-                          PRIMARY KEY(Sno),//该句为表级完整性约束条件,因为已经在表约束条件中约定Sno为主键，所以NOT NULL UNIQUE可以省略
-                          FOREIGN KEY(Sno) REFERENCES S(Sno),//该句为表级完整性约束条件
-                          FOREIGN KEY(Pno) REFERENCES P(Pno));该句为表级完整性约束条件
+                          CONSTRAINT C1 PRIMARY KEY(Sno),/*该句为表级完整性约束条件C1,因为已经在表约束条件中约定Sno为主键，所以NOT NULL UNIQUE可以省略*/
+                          CONSTRAINT C2 CHECK (Sno BETWEEN 90000 AND 999999)/*该句为表级完整性约束条件C2,自定以约束条件*/
+                          CONSTRAINT C3 FOREIGN KEY(Sno) REFERENCES S(Sno),/*该句为表级完整性约束条件C3*/
+                          CONSTRAINT C4 FOREIGN KEY(Pno) REFERENCES P(Pno));/*该句为表级完整性约束条件C4*/
           ```
         + 修改(谨慎修改)
           ```SQL
-          //修改表名
+          /*修改表名*/
           ALTER TABLE S RENAME NewS
-          //修改多个表名
+          /*修改多个表名*/
           RENAME TABLE S TO NewS,TABLE M TO NewM
-          //增加列
+          /*增加列*/
           ALTER TABLE S ADD Zap CHAR(6)
-          //删除列
+          /*删除列*/
           ALTER TABLE S DROP COLUMN Zap
-          //修改列
-            //修改列名称
+          /*修改列*/
+            /*修改列名称*/
             ALTER TABLE S CHANGE Zap NewZap INT NOT NULL
-            //修改列类型
+            /*修改列类型*/
             ALTER TABLE S MODIFY Zap NUMERIC(9)
-         
+            /*修改完整性约束*/
+            ALTER TABLE Student DROP CONSTRAINT C2;     /*删除原来的完整性约束命名子句C2*/
+            ALTER TABLE Student DROP CONSTRAINT C1;     /*删除原来的完整性约束命名子句C1，重定义C1*/
+            ALTER TABLE Student ADD CONSTRAINT C1 CHECK (Sno BETWEEN 20000 AND 30000),
           ```
         + 删除
+          ```SQL
+          /*删除表*/
+          DROP TABLE S
+          ```
       + **索引**
         + 创建
         + 删除

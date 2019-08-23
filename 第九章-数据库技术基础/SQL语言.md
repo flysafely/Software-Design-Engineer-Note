@@ -21,10 +21,10 @@
                           Pno CHAR(30) UNIQUE,/*CHAR(30)是数据类型和长度*/
                           Status CHAR(8),
                           Qty CHAR(20),
-                          CONSTRAINT C1 PRIMARY KEY(Sno),/*该句为表级完整性约束条件C1,因为已经在表约束条件中约定Sno为主键，所以NOT NULL UNIQUE可以省略*/
-                          CONSTRAINT C2 CHECK (Sno BETWEEN 90000 AND 999999)/*该句为表级完整性约束条件C2,自定以约束条件*/
-                          CONSTRAINT C3 FOREIGN KEY(Sno) REFERENCES S(Sno),/*该句为表级完整性约束条件C3*/
-                          CONSTRAINT C4 FOREIGN KEY(Pno) REFERENCES P(Pno));/*该句为表级完整性约束条件C4*/
+                          CONSTRAINT C1 PRIMARY KEY(Sno),/*名为C1为表级完整性约束条件,因为已经在表约束条件中约定Sno为主键，所以NOT NULL UNIQUE可以省略*/
+                          CONSTRAINT C2 CHECK (Sno BETWEEN 90000 AND 999999)/*名为C2表级完整性约束条件,自定以约束条件*/
+                          CONSTRAINT C3 FOREIGN KEY(Sno) REFERENCES S(Sno),/*名为C3表级完整性约束条件*/
+                          CONSTRAINT C4 FOREIGN KEY(Pno) REFERENCES P(Pno));/*名为C4为表级完整性约束条件*/
           ```
         + 修改(谨慎修改)
           ```SQL

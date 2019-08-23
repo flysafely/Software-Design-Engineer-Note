@@ -21,11 +21,14 @@
                           Pno CHAR(30) UNIQUE,//CHAR(30)是数据类型和长度
                           Status CHAR(8),
                           Qty CHAR(20),
-                          PRIMARY KEY(Sname,Status),//该句为表级完整性约束条件
+                          PRIMARY KEY(Sno),//该句为表级完整性约束条件,因为已经在表约束条件中约定Sno为主键，所以NOT NULL UNIQUE可以省略
                           FOREIGN KEY(Sno) REFERENCES S(Sno),//该句为表级完整性约束条件
                           FOREIGN KEY(Pno) REFERENCES P(Pno));该句为表级完整性约束条件
           ```
         + 修改
+          ```SQL
+          
+          ```
         + 删除
       + **索引**
         + 创建

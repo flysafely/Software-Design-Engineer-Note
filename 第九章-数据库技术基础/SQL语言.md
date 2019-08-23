@@ -58,8 +58,8 @@
           > 索引表中的索引项的顺序与表中记录的物理顺序**不一致**
         + 创建
         ```SQL
-        /*CREATE UNIQUE INDEX <索引名> ON <表名>(<列名1>[次序][,<列名2>[次序]]...)*/
-        CREATE UNIQUE INDEX SPJ-NO ON SPJ(Sno ASC,Pno DESC,JNO ASC)
+        /*CREATE [索引值唯一] [聚簇索引] INDEX <索引名> ON <表名>(<列名1>[次序][,<列名2>[次序]]...)*/
+        CREATE [UNIQUE] [CLUSTER] INDEX SPJ-NO ON SPJ(Sno ASC,Pno DESC,JNO ASC)
         ```
         + 删除
       + **视图**

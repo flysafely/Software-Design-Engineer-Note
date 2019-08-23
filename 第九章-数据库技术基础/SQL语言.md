@@ -66,8 +66,19 @@
         DROP INDEX <索引名>
         ```
       + **视图**
+        > 视图不是真实存在的基本表，是一个虚拟表，视图对应的数据并不实际以视图结构储存在数据库中，而是存储在视图所引用的表中
         + 创建
+        ```SQL
+        CREATE VIEW CS-STUDENT
+          AS SELECT Sno,Sname,Sage,Sex
+          FROM Student
+          WHERE SD='CS'
+          WITH CHECK OPTION;/*对该视图进行修改、插入操作时DBMS会自动加上SD='CS'的条件，保证该视图中只有计算机系的学生*/
+        ```
         + 删除
+        ```SQL
+        DROP VIEW <视图名>
+        ```
     + **数据控制：`GRANT`授权，`REVORK`取消授权，`ROLLBACK`回滚，`COMMIT`提交**
       > **数据库控制语言DCL**<br>
         **提交方式：**<br>

@@ -1,12 +1,38 @@
 ### 关系数据库SQL语言
-  + 功能
+  + 特点
+    + 综合统一
+    + 高度非过程化
+    + 面向集合的操作方式
+    + 两种使用方式
+    + 语言简洁、易学易用
+  + **功能**★★★
     + **数据查询：`SELECT`，`FROM`，`WHERE`**
       > **数据库查询语言DQL**
     + **数据操纵：`INSERT`，`UPDATE`，`DELETE`**
       > **数据库定义语言DML**<br>
     + **数据定义：`CREATE`，`DROP`，`ALTER`**
       > **数据库操纵语言DDL**<br>
-        DDL操作是隐性提交的！不能rollback 
+        SQL数据定义包括对表、视图、索引的创建和删除<br>
+        DDL操作是隐性提交的！不能rollback <br>
+      + **表**
+        + 创建
+          ```SQL
+          CREATE TABLE SP(Sno CHAR(5) NOT NULL UNIQUE,//NOT NULL UNIQUE是列级完整性约束条件
+                          Pno CHAR(30) UNIQUE,//CHAR(30)是数据类型和长度
+                          Status CHAR(8),
+                          Qty CHAR(20),
+                          PRIMARY KEY(Sname,Status),//该句为表级完整性约束条件
+                          FOREIGN KEY(Sno) REFERENCES S(Sno),//该句为表级完整性约束条件
+                          FOREIGN KEY(Pno) REFERENCES P(Pno));该句为表级完整性约束条件
+          ```
+        + 修改
+        + 删除
+      + **索引**
+        + 创建
+        + 删除
+      + **视图**
+        + 创建
+        + 删除
     + **数据控制：`GRANT`授权，`REVORK`取消授权，`ROLLBACK`回滚，`COMMIT`提交**
       > **数据库控制语言DCL**<br>
         **提交方式：**<br>
@@ -21,12 +47,6 @@
           若把AUTOCOMMIT设置为ON，则在插入、修改、删除语句执行后，<br>
           系统将自动进行提交，这就是自动提交。其格式为：<br>
           SQL>SET AUTOCOMMIT ON；<br>
-  + 特点
-    + 综合统一
-    + 高度非过程化
-    + 面向集合的操作方式
-    + 两种使用方式
-    + 语言简洁、易学易用
  
     
  

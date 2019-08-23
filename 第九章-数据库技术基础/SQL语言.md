@@ -62,6 +62,9 @@
         CREATE [UNIQUE] [CLUSTER] INDEX SPJ-NO ON SPJ(Sno ASC,Pno DESC,JNO ASC)
         ```
         + 删除
+        ```SQL
+        DROP INDEX <索引名>
+        ```
       + **视图**
         + 创建
         + 删除

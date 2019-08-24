@@ -14,7 +14,31 @@
         [WHERE <条件表达式>]<br>
         [[GROUP BY <列名 1> [HAVING<条件表达式>]]](https://www.jianshu.com/p/ad92b44b0a82)<br>
         [ORDER BY <列名 2> [ASC|DESC]]<br>
-
+      + 子查询<br>
+        > 嵌套查询
+        ```SQL
+        SELECT Sno,Sname
+          FROM S
+          WHERE Sno IN(SELECT Sno
+                         FROM SC
+                         WHERE Cno IN(SELECT Cno
+                                        FROM C
+                                        WHERE Cname='MS'))
+        ```
+      + 聚集函数
+        > 以一个值的集合为输入，返回单个值的函数
+        + 预设聚集函数：
+        
+        |聚集函数|功能|说明|
+        |:--|:--:|:--:|
+        |**COUNT**([DISTINCT\|ALL]*)|统计元组的个数|如果使用了GROUP BY<br>则会按照每个分组来统计元组个数|
+        |**COUNT**([DISTINCT\|ALL]<列名>)|统计一列中值的个数||
+        |**SUM**([DISTINCT\|ALL]<列名>)|计算数值型的一列中值得总和||
+        |**AVG**([DISTINCT\|ALL]<列名>)|计算数值型值得平均值||
+        |**MAX**([DISTINCT\|ALL]<列名>)|求一列值的最大值||
+        |**MIN**([DISTINCT\|ALL]<列名>)|求一列值的最小值||
+      + ANY、ALL谓词和聚集函数的等价转换
+        > 在子查询中使用聚集函数的效率比直接使用ANY、ALL要高
     + **数据操纵：`INSERT`，`UPDATE`，`DELETE`**
       > **数据库定义语言DML**<br>
     + **数据定义：`CREATE`，`DROP`，`ALTER`**

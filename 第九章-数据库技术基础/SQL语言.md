@@ -54,7 +54,27 @@
         |<>ALL|NOT IN|
         |=ANY|IN|
         |=ALL|--|
-        
+      + 分组查询
+        + GROUP BY
+          + 对结果元组进行分组
+          + SELECT子句中使用的聚集操作符仅用在每个分组上
+          + 例如：
+          ```SQL
+          SELECT Sno,AVG(Grade)
+            FROM SC
+            GROUP BY Sno
+          /*查询的是每个学生的各科平均分*/
+          /*结果类似如下*/
+          ----------------
+          |Sno|Grade|
+          |001|47.5|
+          |002|90|
+          |003|68|
+          -----------------
+          ```
+        + HAVING
+        + 元组中分量含有空值
+          + 
     + **数据操纵：`INSERT`，`UPDATE`，`DELETE`**
       > **数据库定义语言DML**<br>
     + **数据定义：`CREATE`，`DROP`，`ALTER`**

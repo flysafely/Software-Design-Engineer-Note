@@ -8,6 +8,13 @@
   + **功能**★★★
     + **数据查询：`SELECT`，`FROM`，`WHERE`**
       > **数据库查询语言DQL**
+      + 格式<br>
+        SELECT [ALL|DISTINCT]<目标列表达式>[,<目标列表达式2>]...<br>
+        FROM <表名或者视图名> [,<表名或视图名>]<br>
+        [WHERE <条件表达式>]<br>
+        [[GROUP BY <列名 1> [HAVING<条件表达式>]]](https://www.jianshu.com/p/ad92b44b0a82)<br>
+        [ORDER BY <列名 2> [ASC|DESC]]<br>
+
     + **数据操纵：`INSERT`，`UPDATE`，`DELETE`**
       > **数据库定义语言DML**<br>
     + **数据定义：`CREATE`，`DROP`，`ALTER`**

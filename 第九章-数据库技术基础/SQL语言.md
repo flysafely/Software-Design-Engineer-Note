@@ -79,6 +79,21 @@
           + 在聚集函数中空值NULL被忽视，即不参与SUM/AVG/COUNT/MIN/MAX
             > ·COUNT(\*)是某个关系中所有元组数目之和，例如某个元组中一个分量重的值为null但是也要计数一次<br>
               ·COUNT(A)是求A属性非空的元组个数之和
+      + 更名运算
+        + 通过AS实现
+          > AS 子句可以出现在SELECT和FROM中<br>
+            可以理解为在SELECT中的AS是将结果中属性重命名<br>
+            将FROM中的AS后子句理解为指定一个变量代指
+      + 字符串操作
+        + 操作符LIKE的模式匹配
+          > 模式匹配是大小写敏感的<br>
+            %匹配任意字符串<br>
+            \_匹配任意一个字符串<br>
+            ESCAPE定义转义符<br>
+            >> 例如定义‘\’作为转义符<br>
+               `
+               LIKE 'AB\\CD%'ESCAPE '\' 匹配所有以AB\CD开头的字符串
+               `
     + **数据操纵：`INSERT`，`UPDATE`，`DELETE`**
       > **数据库定义语言DML**<br>
     + **数据定义：`CREATE`，`DROP`，`ALTER`**

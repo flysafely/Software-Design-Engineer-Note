@@ -74,7 +74,9 @@
           ```
         + HAVING
         + 元组中分量含有空值
-          + 
+          + 在聚集函数中空值NULL被忽视，即不参与SUM/AVG/COUNT/MIN/MAX
+            > ·COUNT(\*)是某个关系中所有元组数目之和，例如某个元组中一个分量重的值为null但是也要计数一次<br>
+              ·COUNT(A)是求A属性非空的元组个数之和
     + **数据操纵：`INSERT`，`UPDATE`，`DELETE`**
       > **数据库定义语言DML**<br>
     + **数据定义：`CREATE`，`DROP`，`ALTER`**

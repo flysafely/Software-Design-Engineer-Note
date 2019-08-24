@@ -39,6 +39,22 @@
         |**MIN**([DISTINCT\|ALL]<列名>)|求一列值的最小值||
       + ANY、ALL谓词和聚集函数的等价转换
         > 在子查询中使用聚集函数的效率比直接使用ANY、ALL要高
+        
+        |谓词表达|聚集函数表达|
+        |:--:|:--:|
+        |>ANY|>MIN|
+        |>ALL|>MAX|
+        |<ANY|<MIN|
+        |<ALL|<MAX|
+        |>=ANY|>=MIN|
+        |>=ALL|>=MAX|
+        |<=ANY|<=MIN|
+        |<=ALL|<=MAX|
+        |<>ANY|--|
+        |<>ALL|NOT IN|
+        |=ANY|IN|
+        |=ALL|--|
+        
     + **数据操纵：`INSERT`，`UPDATE`，`DELETE`**
       > **数据库定义语言DML**<br>
     + **数据定义：`CREATE`，`DROP`，`ALTER`**
